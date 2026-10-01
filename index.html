@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя визитка</title>
+    <!-- Подключаем иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- Переменные для быстрой смены цветов --- */
+        :root {
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-primary: #1a202c;
+            --text-secondary: #64748b;
+            --accent-color: #4d6bfe;
+            --border-radius: 16px;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+
+        /* --- Базовые стили --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        /* --- Карточка визитки --- */
+        .card {
+            background-color: var(--card-bg);
+            max-width: 420px;
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* --- Имя и должность --- */
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        /* --- Блок с контактами и соцсетями --- */
+        .contact-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .contact-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-list a, .contact-list span {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .contact-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-list i {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            width: 20px; /* Фиксированная ширина для выравнивания */
+            text-align: center;
+        }
+
+        /* --- Разделитель --- */
+        .divider {
+            height: 1px;
+            background-color: #e2e8f0;
+            margin: 24px 0;
+        }
+
+        /* --- Текстовые блоки --- */
+        .text-block {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .text-block h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .text-block p {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        /* --- Стили для мобильных --- */
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+            }
+            .name {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- ЗАМЕНИТЕ ЭТИ ДАННЫЕ НА СВОИ -->
+        <h1 class="name">Иван Иванов</h1>
+        <p class="title">Веб-разработчик</p>
+
+        <!-- Контакты -->
+        <ul class="contact-list">
+            <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+            </li>
+            <li>
+                <i class="fab fa-telegram"></i>
+                <a href="https://t.me/username" target="_blank">@username</a>
+            </li>
+            <li>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/username" target="_blank">github.com/username</a>
+            </li>
+            <li>
+                <i class="fab fa-linkedin"></i>
+                <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a>
+            </li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <!-- Текстовые блоки -->
+        <div class="text-block">
+            <h3>Обо мне</h3>
+            <p>Создаю современные и быстрые веб-приложения. Люблю чистый код и продуманный дизайн.</p>
+        </div>
+
+        <div class="text-block">
+            <h3>Услуги</h3>
+            <p>Разработка лендингов, веб-приложений, интеграция API.</p>
+        </div>
+    </div>
+
+</body>
+</html>
